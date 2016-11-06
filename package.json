@@ -1,0 +1,28 @@
+{
+  "name": "full-stack-exercises",
+  "version": "0.0.1",
+  "description": "Practice coding exercises implemented in Node.js.",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "util": "^0.10.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angrbrd/full-stack-exercises.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angrbrd/full-stack-exercises/issues"
+  },
+  "homepage": "https://github.com/angrbrd/full-stack-exercises#readme",
+  "keywords": [
+	"Node.js",
+	"exercises",
+	"practice"
+  ],
+  "author": {
+    "name": "Anna D Derbakova"
+  },
+  "license": "Apache-2.0"
+}
