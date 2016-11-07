@@ -6,6 +6,7 @@
     "body-parser": "^1.15.2",
     "debug": "^2.2.0",
     "express": "^4.14.0",
+    "nano": "^6.2.0",
     "util": "^0.10.3"
   },
   "repository": {
@@ -17,9 +18,9 @@
   },
   "homepage": "https://github.com/angrbrd/full-stack-exercises#readme",
   "keywords": [
-	"Node.js",
-	"exercises",
-	"practice"
+    "Node.js",
+    "exercises",
+    "practice"
   ],
   "author": {
     "name": "Anna D Derbakova"
