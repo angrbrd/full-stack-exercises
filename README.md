@@ -157,8 +157,48 @@ Response:
 
 ## UTXO Pairs
 
-XXX ADD HERE XXX
+In progress!
 
 ## Binary Strings
 
-XXX ADD HERE XXX
+The problem posed is to print all possible binary strings starting from a binary input containing 0s, 1s, and Xs. Each of the Xs could represent either a 0 or a 1. For example, an input of `10X10X0` would produce the output of:
+	1001000	1001010	1011000	1011010
+	
+In this solution, the problem is solved through recursion. Each sucessive character in the string is checked for being either a 0, a 1, or an X. If the character seen is either a 0 or a 1, it is simply added to the string being built and the remainder of the string is passed to the recursive algorithm. If the character is an X, it is first replaced with a 0 and then replaced with a 1 before the remainer of the characters continue to be processed.
+
+### Run The Application
+
+First, clone this repository.
+
+	cd <working_directory>
+	git clone git@github.com:angrbrd/full-stack-exercises.git
+	cd full-stack-exercises
+	
+Then, run the application with the following command:
+
+	node binaryStrings.js <input_string>
+
+`<input_string>` must contain only 1s, 0s, and Xs. An example is below:
+
+	node binaryStrings.js XXX101X
+	
+The input string `XXX101X` produces the following output:
+
+	0001010
+	0001011
+	0011010
+	0011011
+	0101010
+	0101011
+	0111010
+	0111011
+	1001010
+	1001011
+	1011010
+	1011011
+	1101010
+	1101011
+	1111010
+	1111011
+
+Given that for every X within the input string we get two additional variations, i.e. if that particular X would be replaced by either a 0 or a 1, then the number of possibilities increases as `2^X` or exponentially with `X`.
