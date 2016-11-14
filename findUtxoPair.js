@@ -37,9 +37,9 @@ reader.on('close', function() {
 	debug("Data Length = " + dataLength);
 
 	// This is here for debugging only. Printing a large file is a bad idea :-].
-	debug(data);
+	// debug(data);
 
-	// The last two elements in the array are the largetst, as the input array is
+	// The last two elements in the array are the largest, as the input array is
 	// already sorted. Check to see if the last two elements add up to or exceed
 	// the target. If not, return "Not possible".
 	if ( (data[dataLength-1].value + data[dataLength-2].value) < target ) {
