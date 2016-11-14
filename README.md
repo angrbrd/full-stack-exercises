@@ -157,7 +157,53 @@ Response:
 
 ## UTXO Pairs
 
-In progress!
+The problem posed is to find eactly two distinct UTXOs in an input file that add up to or exceed a given target. If no two UTXOs add up to at least the value of the target, the string "Not possible" is returned.
+
+It is assumed that the input file contains a previously sorted list of UTXO values as shown below.
+
+```
+	abcdef 17
+	e478ab 20
+	a84739 23
+	a8561m 41
+	ken451 57
+	krnq44 69
+	ktna45 73
+	ttwken 87
+	rn4514 99
+	e4738a 137
+	fff483 141
+
+```
+
+The program first checks whether the sum of the two largest values in the input file adds up to the target or exceeds the target. The two largest values are the last two values in the input file, as the input list is sorted. If the sum of the last two values is below the target, the program immediately returns "Not possible" and exists.
+
+Once it is determined that there exist two values that add up to or exceed the target, the list is searched inward to identify the pair of values that is closest to the target value.
+
+### Run The Application
+
+First, clone this repository.
+
+	cd <working_directory>
+	git clone git@github.com:angrbrd/full-stack-exercises.git
+	cd full-stack-exercises
+	npm install
+	
+Then, run the application with the following command:
+
+	node findUtxoPair.js <input_data_file> <target_value>
+
+The `<input_data_file>` must contain a list of non-decreasing positive integer values and the `<target_value>` must be an integer. An example command is below:
+
+	node findUtxoPair.js test/utxos1.txt 25
+	
+Running the program on the [utxos1.txt](test/utxos1.txt) input file produces the following output:
+
+```
+node findUtxoPair.js test/utxos1.txt 200
+Best UTXO pair found: 
+krnq44 69, e4738a 137
+```
 
 ## Binary Strings
 
@@ -173,6 +219,7 @@ First, clone this repository.
 	cd <working_directory>
 	git clone git@github.com:angrbrd/full-stack-exercises.git
 	cd full-stack-exercises
+	npm install
 	
 Then, run the application with the following command:
 
